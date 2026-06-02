@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InGames — منصة الألعاب العربية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bg-field"><span class="glow g1"></span><span class="glow g2"></span><span class="glow g3"></span></div>
+<div class="bg-grid"></div>
+<div class="grain"></div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#" aria-label="InGames">
+      <span class="wordmark">In<span class="en">Games</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">المميزات</a>
+      <a href="#games">الألعاب</a>
+      <a href="#modes">أنماط اللعب</a>
+      <a href="#download">حمّل التطبيق</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#download" class="btn btn-primary btn-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l4-4m-4 4l-4-4M4 21h16"/></svg>
+        حمّل
+      </a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="القائمة" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="m-overlay" id="mOverlay"></div>
+<aside class="m-menu" id="mMenu" aria-hidden="true">
+  <div class="m-menu-head">
+    <span class="wordmark">In<span class="en">Games</span></span>
+    <button class="m-close" id="mClose" aria-label="إغلاق">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav class="m-links">
+    <a href="#features"><span>المميزات</span><i></i></a>
+    <a href="#games"><span>الألعاب</span><i></i></a>
+    <a href="#modes"><span>أنماط اللعب</span><i></i></a>
+    <a href="#download"><span>حمّل التطبيق</span><i></i></a>
+  </nav>
+  <a href="#download" class="btn btn-primary m-dl">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l4-4m-4 4l-4-4M4 21h16"/></svg>
+    حمّل التطبيق
+  </a>
+</aside>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal"><span class="dot"></span>منصة ألعاب عربية </span>
+      <h1 class="reveal d1">العب فورًا.<br><span class="hl">تحدَّ أصدقاءك.</span></h1>
+      <p class="reveal d2">العب، تعلّم، استمتع! عشرات الألعاب المسلية في تطبيق واحد — العب بمفردك أو تحدَّ أصدقاءك مباشرةً، تابع لاعبين آخرين، واصعد لوحة الصدارة. كل شيء بواجهة عربية بالكامل.</p>
+      <div class="hero-actions reveal d3">
+        <a href="#download" class="store-badge" aria-label="حمّله من Google Play">
+          <img src="assets/playstore.png" alt="احصل عليه من Google Play">
+        </a>
+      </div>
+      <div class="stats reveal d4">
+        <div class="stat"><div class="num" data-count="50" data-pre="+">+50</div><div class="lbl">لعبة متنوعة</div></div>
+        <div class="stat"><div class="num">2 أنماط</div><div class="lbl">فردي ومع الأصدقاء</div></div>
+        <div class="stat"><div class="num" data-count="100" data-suf="٪">٪100</div><div class="lbl">واجهة عربية</div></div>
+      </div>
+    </div>
+
+    <!-- 3D scene -->
+    <div class="scene">
+      <div class="scene-shadow"></div>
+
+      <!-- orbiting objects (behind & in front) -->
+      <div class="orbit" data-depth="1.6" style="top:6%;right:2%"><div class="glass-chip gold" title="إنجازات">
+        <svg viewBox="0 0 24 24"><path d="M7 4h10v3a5 5 0 0 1-10 0V4z"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3"/><path d="M9 13.5V16a3 3 0 0 0 6 0v-2.5M8 20h8M10 20v-1.5M14 20v-1.5"/></svg>
+      </div></div>
+
+      <div class="orbit" data-depth="2.1" style="top:2%;left:18%"><div class="glass-chip blue" title="شطرنج">
+        <svg viewBox="0 0 24 24"><path d="M12 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/><path d="M9 7h6l-1.4 4h-3.2L9 7zM10 11l-1 5h6l-1-5M7.5 16h9l.8 3h-10.6z"/></svg>
+      </div></div>
+
+      <div class="orbit" data-depth="1.3" style="bottom:8%;left:4%"><div class="glass-chip" title="حرب الدبابات">
+        <svg viewBox="0 0 24 24"><rect x="3" y="13" width="14" height="5" rx="2"/><path d="M6 13v-3h6l2 3M9 10V8h4M14 11h7M5.5 18v1.5M8.5 18v1.5M11.5 18v1.5M14.5 18v1.5"/></svg>
+      </div></div>
+
+      <!-- billiards ball (game) -->
+      <div class="orbit" data-depth="2.4" style="bottom:14%;right:6%"><div class="sphere ball-8"><div class="num"><span>8</span></div></div></div>
+
+      <!-- more game icons (replacing plain orbs) -->
+      <div class="orbit" data-depth="1.8" style="top:42%;right:-2%"><div class="glass-chip cyan" title="إكس أو">
+        <svg viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M9 4v16M15 4v16"/></svg>
+      </div></div>
+      <div class="orbit" data-depth="1.1" style="top:30%;left:8%"><div class="glass-chip blue" title="ألعاب متنوعة">
+        <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M7 12h2M8 11v2"/><circle cx="15.5" cy="11" r="1"/><circle cx="17.5" cy="13.5" r="1"/></svg>
+      </div></div>
+
+      <!-- phone -->
+      <div class="phone">
+        <div class="phone-screen">
+          <image-slot id="hero-screen" shape="rounded" radius="30" src="assets/screen-home.jpeg" placeholder="شاشة التطبيق"></image-slot>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section id="features" class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal"><span class="dot"></span>المميزات</span>
+      <h2 class="reveal d1">كل ما تحتاجه <span class="grad">للعب والتواصل</span></h2>
+      <p class="reveal d2">منصة ألعاب متكاملة بُنيت لتكون سريعة واجتماعية — تحدّيات يومية، ألعاب جديدة باستمرار، ومنافسة مباشرة مع أصدقائك.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+        <h3>لعب فوري</h3>
+        <p>ابدأ أي لعبة بضغطة واحدة دون تنزيل إضافي أو انتظار — عشرات الألعاب جاهزة للعب فورًا داخل التطبيق.</p>
+      </div>
+      <div class="feat reveal d2">
+        <div class="ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="7" r="2.4"/><path d="M15.5 13.5A5 5 0 0 1 21 18"/></svg></div>
+        <h3>لعب جماعي مباشر</h3>
+        <p>تنافس مع لاعبين حقيقيين في الوقت الفعلي عبر مباريات سريعة ومتزامنة بسلاسة تامة.</p>
+      </div>
+      <div class="feat reveal d3">
+        <div class="ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-4 4V5z"/><path d="M8 9h8M8 12h5"/></svg></div>
+        <h3>دردشة ورسائل خاصة</h3>
+        <p>تواصل مع أصدقائك عبر المحادثات الجماعية والرسائل الخاصة قبل المباراة وأثناءها.</p>
+      </div>
+      <div class="feat reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 8-3 8h18s-3-1-3-8z"/><path d="M10.5 21a2 2 0 0 0 3 0"/></svg></div>
+        <h3>إشعارات لحظية</h3>
+        <p>تنبيهات فورية عند دعوتك لمباراة أو وصول رسالة أو تسجيل إنجاز جديد — لا يفوتك شيء.</p>
+      </div>
+      <div class="feat reveal d2">
+        <div class="ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M18 8v6M21 11h-6"/></svg></div>
+        <h3>نظام المتابعة</h3>
+        <p>تابع لاعبيك المفضلين، اعرف متى يلعبون، وكوّن دائرة أصدقاء حول ألعابك المشتركة.</p>
+      </div>
+      <div class="feat reveal d3">
+        <div class="ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v3a5 5 0 0 1-10 0V4z"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3"/><path d="M9 14v2a3 3 0 0 0 6 0v-2M8 20h8M11 20v-2M13 20v-2"/></svg></div>
+        <h3>تحدّي اليوم وإنجازات</h3>
+        <p>تحدٍّ يومي جديد، قسم «الأكثر لعبًا»، وأوسمة تُكافئ مهارتك — تسلّق لوحة الصدارة وافتح إنجازات حصرية.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GAMES ===== -->
+<section id="games" class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal"><span class="dot"></span>الألعاب</span>
+      <h2 class="reveal d1">مكتبة <span class="grad">ألعاب متنوّعة</span></h2>
+      <p class="reveal d2">من ألعاب التصويب والمنصّات إلى الألغاز وألعاب الذكاء — مكتبة تتجدّد باستمرار بألعاب جديدة.</p>
+    </div>
+    <div class="games-grid" id="gamesGrid"></div>
+  </div>
+</section>
+
+<!-- ===== PLAY MODES ===== -->
+<section id="modes" class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal"><span class="dot"></span>أنماط اللعب</span>
+      <h2 class="reveal d1">العب <span class="grad">على طريقتك</span></h2>
+      <p class="reveal d2">طريقتان للّعب تناسبان كل مزاج — والقلب النابض هو اللعب المباشر مع الأصدقاء ولاعبين حقيقيين.</p>
+    </div>
+    <div class="modes modes-2">
+      <div class="mode m3 featured reveal d1">
+        <span class="glo"></span>
+        <div class="mtag">الأكثر تشويقًا</div>
+        <div class="mnum">01</div>
+        <div class="micon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="8" r="2.6"/><circle cx="17" cy="8" r="2.6"/><circle cx="12" cy="6.5" r="2.8"/><path d="M3 20a5 5 0 0 1 8-4M21 20a5 5 0 0 0-8-4M8 21a4.5 4.5 0 0 1 8 0"/></svg></div>
+        <h3>العب مع الأصدقاء</h3>
+        <p>ادعُ أصدقاءك إلى غرفة خاصة، تبادلوا الرسائل، والعبوا معًا في الوقت الفعلي أينما كنتم.</p>
+      </div>
+      <div class="mode m1 reveal d2">
+        <span class="glo"></span>
+        <div class="mnum">02</div>
+        <div class="micon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></div>
+        <h3>فردية</h3>
+        <p>تدرّب وتسلَّ بمفردك ضد الكمبيوتر، حسّن مهارتك وحطّم أرقامك القياسية على راحتك في أي وقت.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section id="download" class="block cta-band">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <h2>جاهز للعب؟ حمّل <span class="wordmark">In<span class="en">Games</span></span> الآن</h2>
+      <p>متوفّر مجانًا على أندرويد — عشرات الألعاب، تحدّيات يومية، ومجتمع لاعبين عربي بانتظارك.</p>
+      <a href="#" class="store-badge store-badge-lg" aria-label="حمّله من Google Play">
+        <img src="assets/playstore.png" alt="احصل عليه من Google Play">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#"><span class="wordmark">In<span class="en">Games</span></span></a>
+        <p>العب، تعلّم، استمتع! منصة الألعاب العربية التي تجمع المرح والمنافسة والتواصل في تطبيق واحد.</p>
+      </div>
+      <div class="foot-col">
+        <h5>المنصة</h5>
+        <a href="#features">المميزات</a>
+        <a href="#games">الألعاب</a>
+        <a href="#modes">أنماط اللعب</a>
+        <a href="#download">تحميل التطبيق</a>
+      </div>
+      <div class="foot-col">
+        <h5>الدعم</h5>
+        <a href="#">مركز المساعدة</a>
+        <a href="privacy.html">سياسة الخصوصية</a>
+        <a href="terms.html">شروط الاستخدام</a>
+        <a href="mailto:ingamesplayin@gmail.com">تواصل معنا</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 InGames — جميع الحقوق محفوظة.</p>
+      <div class="socials">
+        <a href="#" aria-label="تويتر"><svg viewBox="0 0 24 24"><path d="M22 5.8c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4 4 0 0 0-6.9 3.7A11.3 11.3 0 0 1 3.8 4.4a4 4 0 0 0 1.2 5.3c-.6 0-1.2-.2-1.8-.5a4 4 0 0 0 3.2 4 4 4 0 0 1-1.8.1 4 4 0 0 0 3.7 2.8A8 8 0 0 1 2 17.6 11.3 11.3 0 0 0 8.1 19.4c7.4 0 11.4-6.1 11.4-11.4v-.5c.8-.6 1.5-1.3 2-2.1z"/></svg></a>
+        <a href="#" aria-label="إنستغرام"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.4a3.8 3.8 0 0 1-1.4-.9 3.8 3.8 0 0 1-.9-1.4c-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1a3.5 3.5 0 0 0-.8-1.3 3.5 3.5 0 0 0-1.3-.8c-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.3-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg></a>
+        <a href="#" aria-label="يوتيوب"><svg viewBox="0 0 24 24"><path d="M22 7.4a2.7 2.7 0 0 0-1.9-1.9C18.4 5 12 5 12 5s-6.4 0-8.1.5A2.7 2.7 0 0 0 2 7.4 28 28 0 0 0 1.5 12 28 28 0 0 0 2 16.6a2.7 2.7 0 0 0 1.9 1.9C5.6 19 12 19 12 19s6.4 0 8.1-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22.5 12 28 28 0 0 0 22 7.4zM10 15.1V8.9l5.2 3.1-5.2 3.1z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/imageslot.js"></script>
+<script>
+/* build games grid */
+(function(){
+  const games=[
+    {name:"شطرنج",mode:"multi",img:"assets/chess.jpg"},
+    {name:"إكس أو الكبرى",mode:"multi",img:"assets/xo.jpg"},
+    {name:"سباق السقوط",mode:"multi",img:"assets/fall_race.jpg"}
+  ];
+  const labels={solo:"فردية",multi:"جماعية"};
+  const grid=document.getElementById('gamesGrid');
+  games.forEach((g,i)=>{
+    const card=document.createElement('div');
+    card.className='game reveal d'+((i%3)+1);
+    card.innerHTML=`
+      <div class="game-thumb">
+        <span class="badge ${g.mode}">${labels[g.mode]}</span>
+        <img class="game-img" src="${g.img}" alt="${g.name}" loading="lazy">
+      </div>
+      <div class="game-foot">
+        <h4>${g.name}</h4>
+      </div>`;
+    grid.appendChild(card);
+  });
+  /* "and more games" card */
+  const more=document.createElement('div');
+  more.className='game game-more reveal d'+((games.length%3)+1);
+  more.innerHTML=`
+    <div class="more-inner">
+      <span class="more-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5v14"/></svg>
+      </span>
+      <h4>والمزيد من الألعاب</h4>
+      <p>مكتبة تتجدّد باستمرار</p>
+    </div>`;
+  grid.appendChild(more);
+})();
+</script>
+<script src="main.js"></script>
+</body>
+</html>
