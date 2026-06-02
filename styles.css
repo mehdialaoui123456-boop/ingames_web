@@ -425,3 +425,73 @@ body.menu-open{overflow:hidden}
 
 /* extra breathing room between the two hero headline lines */
 .hero-copy h1 .hl{display:inline-block;margin-top:.18em}
+
+/* ════════════════════════════════════════════════════════════════
+   PHONE OPTIMIZATIONS
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── Enhancements to the existing 620px breakpoint ── */
+@media(max-width:620px){
+  section.block{padding:60px 0}
+  .hero-copy h1{font-size:clamp(2.1rem,7.5vw,2.8rem)}
+  .hero-copy p{font-size:1.05rem;margin-bottom:26px}
+  .stats{gap:10px}
+  .stat{min-width:80px;padding:14px 14px}
+  .stat .num{font-size:1.7rem}
+  .sec-head{margin:0 auto 36px}
+  .sec-head p{font-size:1rem}
+  .cta-band{margin:20px 0 60px}
+  .foot-bottom{flex-direction:column;align-items:flex-start;gap:14px}
+  footer{padding:48px 0 28px}
+}
+
+/* ── 480px and below — modern phone portrait ── */
+@media(max-width:480px){
+  .wrap{padding:0 16px}
+  .hero{padding:110px 0 44px}
+  .scene{height:340px}
+  .phone{width:196px;height:390px}
+  .hero-actions{margin-bottom:28px}
+  section.block{padding:50px 0}
+  .sec-head h2{font-size:clamp(1.75rem,6.5vw,2.4rem);margin:14px 0 10px}
+  .sec-head p{font-size:.95rem}
+  .cta-inner{padding:36px 18px}
+  .cta-inner h2{font-size:clamp(1.8rem,6vw,2.4rem)}
+  .cta-inner p{font-size:1rem}
+  .feat{padding:24px 20px}
+  .feat h3{font-size:1.12rem}
+  .feat p{font-size:.94rem}
+  .mode{padding:28px 22px}
+  .mode h3{font-size:1.3rem}
+  .mode p{font-size:.96rem}
+  .game-more{min-height:180px}
+  .glass-chip{width:68px;height:68px;border-radius:18px}
+  .glass-chip svg{width:32px;height:32px}
+  .ball-8{width:60px;height:60px}
+  .nav-inner{margin:10px auto 0}
+  footer{padding:40px 0 24px}
+  .foot-grid{gap:24px}
+}
+
+/* ── 390px and below — small/standard phones ── */
+@media(max-width:390px){
+  .wrap{padding:0 14px}
+  .hero{padding:100px 0 36px}
+  .scene{height:290px}
+  .phone{width:174px;height:346px}
+  .hero-copy h1{font-size:clamp(1.85rem,8.5vw,2.1rem)}
+  .hero-copy p{font-size:1rem}
+  .stats{gap:8px}
+  .stat{padding:12px 10px}
+  .stat .num{font-size:1.45rem}
+  .stat .lbl{font-size:.8rem}
+  section.block{padding:44px 0}
+  .sec-head{margin:0 auto 28px}
+  .cta-inner{padding:28px 16px}
+  .cta-inner h2{font-size:clamp(1.5rem,7.5vw,1.9rem)}
+  .btn{font-size:.9rem;padding:12px 20px}
+  .feat{padding:20px 16px}
+  .mode{padding:22px 18px}
+  .foot-grid{gap:20px}
+  footer{padding:32px 0 20px}
+}
