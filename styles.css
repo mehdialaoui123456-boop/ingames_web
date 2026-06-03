@@ -427,6 +427,99 @@ body.menu-open{overflow:hidden}
 .hero-copy h1 .hl{display:inline-block;margin-top:.18em}
 
 /* ════════════════════════════════════════════════════════════════
+   3D SECTION TRANSITIONS
+   ════════════════════════════════════════════════════════════════ */
+
+/* perspective context on grid containers so child reveals animate in 3D */
+.feat-grid{perspective:1200px;perspective-origin:50% 0%}
+.games-grid{perspective:1000px;perspective-origin:50% 0%}
+.modes{perspective:1100px;perspective-origin:50% 0%}
+
+/* ── feature cards: 3D entrance (overrides earlier reveal rules) ── */
+.feat.reveal{
+  transform:translateY(36px) rotateX(22deg) scale(.96);
+  filter:blur(5px);
+  transform-origin:bottom center;
+}
+.feat.reveal:nth-child(3n+1){
+  transform:translateY(34px) translateX(-16px) rotateX(16deg) rotateY(10deg) scale(.97);
+  filter:blur(5px);
+  transform-origin:bottom center;
+}
+.feat.reveal:nth-child(3n){
+  transform:translateY(34px) translateX(16px) rotateX(16deg) rotateY(-10deg) scale(.97);
+  filter:blur(5px);
+  transform-origin:bottom center;
+}
+.feat.reveal.in{transform:none;filter:blur(0)}
+
+/* ── game cards: strong perspective rise ── */
+.game.reveal{
+  transform:translateY(50px) rotateX(28deg) scale(.92);
+  transform-origin:bottom center;
+  filter:blur(5px);
+}
+.game.reveal.in{transform:none;filter:blur(0)}
+
+/* ── mode cards: depth zoom ── */
+.mode.reveal{
+  transform:translateY(50px) rotateX(20deg) translateZ(-50px) scale(.92);
+  transform-origin:bottom center;
+  filter:blur(5px);
+}
+.mode.reveal.in{transform:none;filter:blur(0)}
+
+/* ── section heading: X-axis flip ── */
+.sec-head h2.reveal{
+  transform:translateY(30px) rotateX(18deg);
+  transform-origin:bottom center;
+  filter:blur(5px);
+}
+.sec-head h2.reveal.in{transform:none;filter:blur(0)}
+
+/* ── CTA inner: perspective flip ── */
+.cta-inner.reveal{
+  opacity:0;
+  transform:perspective(1100px) rotateX(12deg) translateY(40px) scale(.97);
+  transform-origin:bottom center;
+  filter:blur(6px);
+  transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1),filter .8s ease;
+}
+.cta-inner.reveal.in{
+  opacity:1;
+  transform:perspective(1100px) rotateX(0deg) translateY(0) scale(1);
+  filter:blur(0);
+}
+
+/* glowing seam between sections */
+section.block::after{
+  content:'';
+  position:absolute;
+  bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(55,224,255,.1) 15%,
+    rgba(55,224,255,.28) 50%,
+    rgba(55,224,255,.1) 85%,
+    transparent 100%);
+  pointer-events:none;
+}
+
+/* section wraps receive scroll-driven 3D depth tilt via JS */
+section.block .wrap,footer .wrap{will-change:transform}
+
+/* kill all 3D effects for reduced-motion preference */
+@media(prefers-reduced-motion:reduce){
+  .feat-grid,.games-grid,.modes{perspective:none}
+  .feat.reveal,.feat.reveal:nth-child(3n+1),.feat.reveal:nth-child(3n),
+  .game.reveal,.mode.reveal,
+  .sec-head h2.reveal,.cta-inner.reveal{
+    opacity:1!important;transform:none!important;filter:none!important;transition:none!important
+  }
+  section.block .wrap,footer .wrap{will-change:auto;transform:none!important}
+}
+
+/* ════════════════════════════════════════════════════════════════
    PHONE OPTIMIZATIONS
    ════════════════════════════════════════════════════════════════ */
 
@@ -443,14 +536,22 @@ body.menu-open{overflow:hidden}
   .cta-band{margin:20px 0 60px}
   .foot-bottom{flex-direction:column;align-items:flex-start;gap:14px}
   footer{padding:48px 0 28px}
+  .phone{border-radius:35px;padding:11px}
+  .phone::before{width:75px;height:22px;top:13px;border-radius:0 0 13px 13px}
+  .phone-screen{border-radius:25px}
+  .phone-screen image-slot{height:calc(100% + 23px);top:-23px}
+  .scene{perspective:1075px}
 }
 
 /* ── 480px and below — modern phone portrait ── */
 @media(max-width:480px){
   .wrap{padding:0 16px}
   .hero{padding:110px 0 44px}
-  .scene{height:340px}
-  .phone{width:196px;height:390px}
+  .scene{height:340px;perspective:850px}
+  .phone{width:196px;height:390px;border-radius:29px;padding:9px}
+  .phone::before{width:63px;height:18px;top:11px;border-radius:0 0 11px 11px}
+  .phone-screen{border-radius:21px}
+  .phone-screen image-slot{height:calc(100% + 20px);top:-20px}
   .hero-actions{margin-bottom:28px}
   section.block{padding:50px 0}
   .sec-head h2{font-size:clamp(1.75rem,6.5vw,2.4rem);margin:14px 0 10px}
@@ -477,8 +578,11 @@ body.menu-open{overflow:hidden}
 @media(max-width:390px){
   .wrap{padding:0 14px}
   .hero{padding:100px 0 36px}
-  .scene{height:290px}
-  .phone{width:174px;height:346px}
+  .scene{height:290px;perspective:725px}
+  .phone{width:174px;height:346px;border-radius:26px;padding:8px}
+  .phone::before{width:56px;height:16px;top:10px;border-radius:0 0 10px 10px}
+  .phone-screen{border-radius:18px}
+  .phone-screen image-slot{height:calc(100% + 17px);top:-17px}
   .hero-copy h1{font-size:clamp(1.85rem,8.5vw,2.1rem)}
   .hero-copy p{font-size:1rem}
   .stats{gap:8px}

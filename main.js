@@ -94,6 +94,40 @@
   /* gentle idle float via keyframes assigned per-orbit */
 })();
 
+/* ── 3D Scroll-Driven Section Depth ── */
+(function(){
+  'use strict';
+  const reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduce) return;
+
+  const targets=[
+    ...document.querySelectorAll('section.block .wrap'),
+    document.querySelector('footer .wrap')
+  ].filter(Boolean);
+
+  let ticking=false;
+
+  function updateDepth(){
+    const vh=window.innerHeight;
+    targets.forEach(el=>{
+      const r=el.getBoundingClientRect();
+      const cy=r.top+r.height*.5;
+      // prog: 1 = section below screen center, 0 = centered, -1 = above
+      const prog=(cy-vh*.5)/vh;
+      const tiltX=Math.max(-2.5,Math.min(2.5,prog*3.2));
+      const tz=Math.max(-18,Math.min(0,-prog*24));
+      el.style.transform=`perspective(1400px) rotateX(${tiltX.toFixed(2)}deg) translateZ(${tz.toFixed(1)}px)`;
+    });
+    ticking=false;
+  }
+
+  window.addEventListener('scroll',()=>{
+    if(!ticking){requestAnimationFrame(updateDepth);ticking=true;}
+  },{passive:true});
+  window.addEventListener('resize',updateDepth);
+  updateDepth();
+})();
+
 /* ── Mobile menu (hamburger drawer) ── */
 (function(){
   'use strict';
