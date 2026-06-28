@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>InGames — منصة الألعاب العربية</title>
+<link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+<link rel="apple-touch-icon" href="assets/favicon.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -179,7 +181,7 @@
         <span class="glo"></span>
         <div class="mtag">الأكثر تشويقًا</div>
         <div class="mnum">01</div>
-        <div class="micon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="8" r="2.6"/><circle cx="17" cy="8" r="2.6"/><circle cx="12" cy="6.5" r="2.8"/><path d="M3 20a5 5 0 0 1 8-4M21 20a5 5 0 0 0-8-4M8 21a4.5 4.5 0 0 1 8 0"/></svg></div>
+        <div class="micon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 19.5a6 6 0 0 1 12 0"/><path d="M10 19.5a6 6 0 0 1 12 0"/></svg></div>
         <h3>العب مع الأصدقاء</h3>
         <p>ادعُ أصدقاءك إلى غرفة خاصة، تبادلوا الرسائل، والعبوا معًا في الوقت الفعلي أينما كنتم.</p>
       </div>
@@ -248,7 +250,10 @@
   const games=[
     {name:"شطرنج",mode:"multi",img:"assets/chess.jpg"},
     {name:"إكس أو الكبرى",mode:"multi",img:"assets/xo.jpg"},
-    {name:"سباق السقوط",mode:"multi",img:"assets/fall_race.jpg"}
+    {name:"سباق السقوط",mode:"multi",img:"assets/fall_race.jpg"},
+    {name:"بلياردو",mode:"multi",img:"assets/billiards.jpg"},
+    {name:"البولينغ",mode:"solo",img:"assets/bowling.jpg"},
+    {name:"لعبة الورق",mode:"multi",img:"assets/cards%20game.jpg"}
   ];
   const labels={solo:"فردية",multi:"جماعية"};
   const grid=document.getElementById('gamesGrid');
