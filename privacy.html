@@ -31,6 +31,7 @@
   }
   .hero h1{font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:6px}
   .hero .sub{color:rgba(255,255,255,.85);font-size:.85rem}
+  .hero .dev{color:rgba(255,255,255,.7);font-size:.78rem;margin-top:4px}
   .wrap{max-width:760px;margin:0 auto;padding:0 18px}
   .lang-toggle{display:flex;gap:8px;justify-content:center;margin:18px 0}
   .lang-toggle button{
@@ -51,6 +52,11 @@
   ul{padding-inline-start:22px;margin-bottom:8px}
   li{margin-bottom:6px}
   .muted{color:var(--muted);font-size:.82rem}
+  .note{
+    background:rgba(24,119,242,.08);border:1px solid rgba(24,119,242,.25);
+    border-radius:12px;padding:12px 14px;margin:10px 0;
+  }
+  .note p:last-child{margin-bottom:0}
   a{color:var(--blue);text-decoration:none}
   a:hover{text-decoration:underline}
   .updated{text-align:center;color:var(--muted);font-size:.8rem;margin-top:24px}
@@ -62,6 +68,7 @@
 <div class="hero">
   <h1>InGames</h1>
   <div class="sub">سياسة الخصوصية · Privacy Policy</div>
+  <div class="dev">Allaoui_projects</div>
 </div>
 
 <div class="wrap">
@@ -73,93 +80,161 @@
   <!-- ════════════ ARABIC ════════════ -->
   <section class="doc active" id="doc-ar" dir="rtl">
     <div class="card">
-      <p class="muted">آخر تحديث: 1 يونيو 2026</p>
-      <p>تشرح سياسة الخصوصية هذه كيف تقوم <strong>InGames</strong> ("نحن") بجمع واستخدام وحماية معلوماتك عند استخدامك لتطبيق <strong>InGames</strong> ("التطبيق"). باستخدامك للتطبيق فإنك توافق على الممارسات الموضحة هنا.</p>
+      <p class="muted">آخر تحديث: 3 أغسطس 2026</p>
+      <p>تشرح سياسة الخصوصية هذه كيف يقوم <strong>Allaoui_projects</strong> ("نحن") بجمع واستخدام وحماية معلوماتك عند استخدامك لتطبيق <strong>InGames</strong> ("التطبيق"). باستخدامك للتطبيق فإنك توافق على الممارسات الموضحة هنا.</p>
 
-      <h2>1. الفئة العمرية</h2>
-      <p>التطبيق مخصص للمستخدمين الذين تبلغ أعمارهم <strong>13 عامًا فما فوق</strong>. لا نقوم عن قصد بجمع بيانات من أطفال دون سن 13 عامًا. إذا علمنا بأننا جمعنا بيانات من طفل دون هذا السن، سنحذفها.</p>
+      <h2>1. من نحن</h2>
+      <p>التطبيق مُطوَّر ومنشور من قِبل <strong>Allaoui_projects</strong>، مطوّر مستقل مقيم في المملكة المغربية، وهو الجهة المسؤولة عن معالجة بياناتك (Data Controller). للتواصل: <a href="mailto:ingamesplayin@gmail.com">ingamesplayin@gmail.com</a>.</p>
 
-      <h2>2. المعلومات التي نجمعها</h2>
+      <h2>2. الفئة العمرية</h2>
+      <p>التطبيق مخصص للمستخدمين الذين تبلغ أعمارهم <strong>13 عامًا فما فوق</strong>، وهو غير موجَّه للأطفال. لا نقوم عن قصد بجمع بيانات من أطفال دون سن 13 عامًا. إذا علمنا بأننا جمعنا بيانات من طفل دون هذا السن، سنحذف الحساب وبياناته.</p>
+
+      <h2>3. المعلومات التي نجمعها</h2>
       <ul>
-        <li><strong>معلومات الحساب:</strong> الاسم الظاهر، البريد الإلكتروني، صورة الملف الشخصي أو الأيقونة المختارة.</li>
-        <li><strong>المحتوى الذي تنشئه:</strong> الرسائل المباشرة، قوائم المتابعة، الألعاب المفضلة والمحفوظة، التقييمات.</li>
-        <li><strong>بيانات الاستخدام:</strong> الألعاب التي تلعبها، تفاعلاتك داخل التطبيق، ومعرّفات الأجهزة التقنية.</li>
-        <li><strong>الإشعارات:</strong> رمز جهازك (FCM Token) لإرسال الإشعارات.</li>
+        <li><strong>معلومات الحساب:</strong> الاسم الظاهر، البريد الإلكتروني، صورة الملف الشخصي أو الأيقونة المختارة. عند تسجيل الدخول عبر Google نستلم اسمك وبريدك وصورتك من حسابك في Google فقط.</li>
+        <li><strong>ملفك وتقدمك داخل التطبيق:</strong> رصيد العملات (الكوينز)، العناصر التي تملكها (أيقونات الملف الشخصي وخلفيات المحادثة)، سلسلة تسجيل الدخول اليومي، عدد الألعاب التي لعبتها، الألعاب المفضلة والمحفوظة والتقييمات.</li>
+        <li><strong>المحتوى الذي تنشئه:</strong> الرسائل المباشرة، رسائل غرف اللعب الجماعي، البلاغات التي ترسلها، وقوائم المتابعة والمتابِعين.</li>
+        <li><strong>بيانات الاستخدام والجهاز:</strong> الألعاب التي تفتحها، تفاعلاتك داخل التطبيق، نوع الجهاز ونظام التشغيل، إصدار التطبيق، اللغة، ومعرّفات تقنية، إضافة إلى بيانات تشخيصية عن الأعطال والأداء.</li>
+        <li><strong>الإشعارات:</strong> رمز جهازك (FCM Token) لإرسال الإشعارات، وتفضيلاتك بشأن أنواع الإشعارات.</li>
+        <li><strong>بيانات الإعلانات:</strong> معرّف الإعلانات الخاص بجهازك (Advertising ID)، عنوان IP (الذي قد يُستدل منه على موقع تقريبي على مستوى المدينة/البلد)، وتفاعلك مع الإعلانات — تُجمع بواسطة Google AdMob كما هو موضح في القسم 5.</li>
+        <li><strong>بيانات مكافحة إساءة الاستخدام:</strong> رموز التحقق من سلامة التطبيق (Firebase App Check)، وطوابع زمنية وعدّادات للحد من التكرار، تُستخدم لمنع الغش والاحتيال في المكافآت.</li>
+      </ul>
+      <p class="muted">لا يطلب التطبيق الوصول إلى جهات الاتصال أو الموقع الجغرافي الدقيق أو الكاميرا أو الملفات، ولا يسجّل الصوت.</p>
+
+      <h2>4. كيف نستخدم معلوماتك</h2>
+      <ul>
+        <li>تشغيل التطبيق وتمكين ميزات اللعب الجماعي والمطابقة العشوائية والرسائل والمتابعة.</li>
+        <li>إدارة اقتصاد العملات داخل التطبيق: المكافآت اليومية، التحديات، عجلة الحظ، إهداء العملات، وشراء الأيقونات والخلفيات بالعملات.</li>
+        <li>تخصيص المحتوى والتوصيات داخل التطبيق.</li>
+        <li>إرسال الإشعارات المتعلقة بنشاطك (رسالة جديدة، متابِع جديد، دعوة للعب، إعلانات إدارية).</li>
+        <li>عرض الإعلانات وقياس أدائها، ومنح مكافآت الإعلانات والتحقق من صحتها.</li>
+        <li>تحليل الاستخدام بشكل إجمالي لتحسين التطبيق وإصلاح الأعطال.</li>
+        <li>الحفاظ على الأمان، ومراجعة البلاغات، ومنع الغش وإساءة الاستخدام.</li>
       </ul>
 
-      <h2>3. كيف نستخدم معلوماتك</h2>
+      <h2>5. الإعلانات ومعرّف الإعلانات</h2>
+      <p>يعرض التطبيق إعلانات (بانر، بيني، وإعلانات بمكافأة) عبر <strong>Google AdMob</strong>. قد تستخدم Google ومزوّدوها معرّف الإعلانات وعنوان IP وبيانات الاستخدام لعرض إعلانات وقياسها، وقد تكون هذه الإعلانات مخصّصة بناءً على اهتماماتك.</p>
       <ul>
-        <li>تشغيل التطبيق وتمكين ميزات اللعب الجماعي والرسائل والمتابعة.</li>
-        <li>تخصيص المحتوى والتوصيات.</li>
-        <li>إرسال الإشعارات المتعلقة بالنشاط.</li>
-        <li>الحفاظ على الأمان ومنع إساءة الاستخدام.</li>
+        <li>إذا كنت في المنطقة الاقتصادية الأوروبية أو المملكة المتحدة أو سويسرا، قد تُعرض عليك رسالة موافقة من Google قبل عرض الإعلانات المخصّصة؛ وفي حال عدم الموافقة تقتصر الإعلانات على النوع غير المخصّص.</li>
+        <li>يمكنك في أي وقت إيقاف تخصيص الإعلانات أو إعادة تعيين معرّف الإعلانات أو حذفه من إعدادات جهاز Android: <em>الإعدادات ← Google ← الإعلانات</em>.</li>
+        <li>لمزيد من التحكم في إعلانات Google: <a href="https://myadcenter.google.com" target="_blank" rel="noopener">myadcenter.google.com</a>.</li>
+      </ul>
+      <p>عند مشاهدة إعلان بمكافأة، تستلم خوادمنا من AdMob إشعارًا موقّعًا يؤكد إتمام المشاهدة (يتضمن معرّف حسابك داخل التطبيق فقط) حتى تُضاف المكافأة إلى رصيدك دون تلاعب.</p>
+
+      <h2>6. التحليلات</h2>
+      <p>نستخدم <strong>Google Analytics for Firebase</strong> لفهم كيفية استخدام التطبيق بشكل إجمالي (عدد الجلسات، الشاشات المستخدمة، الأعطال). لا نستخدم هذه البيانات للتعرف على هويتك الشخصية.</p>
+
+      <h2>7. مزودو الخدمة من الأطراف الثالثة</h2>
+      <p>نعتمد على خدمات Google التالية لتشغيل التطبيق: <strong>Firebase Authentication</strong> (تسجيل الدخول)، <strong>Cloud Firestore</strong> (قاعدة البيانات)، <strong>Cloud Functions</strong> (العمليات على الخادم)، <strong>Firebase Cloud Messaging</strong> (الإشعارات)، <strong>Firebase App Check</strong> (الحماية من إساءة الاستخدام)، <strong>Firebase Hosting</strong> (الاستضافة)، <strong>Google Sign-In</strong>، و<strong>Google AdMob</strong> (الإعلانات). يخضع استخدام هذه الخدمات لسياسة خصوصية Google المتوفرة على <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+      <p>تُفتح الألعاب داخل التطبيق عبر متصفح مدمج من نطاقنا الخاص <a href="https://ingames.fun" target="_blank" rel="noopener">ingames.fun</a>؛ تعمل هذه الألعاب محليًا على جهازك ولا تطلب منك بيانات شخصية.</p>
+
+      <h2>8. مشاركة المعلومات</h2>
+      <p><strong>لا نبيع بياناتك الشخصية ولا نشاركها مع وسطاء بيانات.</strong> تُعرض بعض المعلومات للمستخدمين الآخرين كجزء طبيعي من الميزات الاجتماعية: اسمك الظاهر، صورتك أو أيقونتك، ملفك العام وإحصاءاتك، قوائم المتابعة، والرسائل التي ترسلها إلى مستخدم معيّن (تظهر له وحده). نشارك البيانات فقط مع مزوّدي الخدمة المذكورين أعلاه، أو عند وجود التزام قانوني، أو لحماية حقوقنا وسلامة المستخدمين.</p>
+
+      <h2>9. نقل البيانات دوليًا</h2>
+      <p>تُخزَّن البيانات وتُعالَج على خوادم Google، وقد تقع خارج بلد إقامتك. تلتزم Google بآليات النقل المعتمدة (مثل البنود التعاقدية القياسية) لحماية هذه البيانات.</p>
+
+      <h2>10. الاحتفاظ بالبيانات وحذف الحساب</h2>
+      <p>نحتفظ ببيانات حسابك طالما ظلّ الحساب نشطًا. يمكنك حذف حسابك في أي وقت من داخل التطبيق عبر <em>الإعدادات ← حذف الحساب</em>، أو بمراسلتنا على البريد أدناه.</p>
+      <ul>
+        <li>عند الحذف تُزال: بيانات حسابك، ملفك الشخصي، رصيد عملاتك وعناصرك، قوائم المتابعة، إشعاراتك، ورمز جهازك.</li>
+        <li>قد تبقى الرسائل التي أرسلتها سابقًا ظاهرة لدى المستلم، كما قد نحتفظ لفترة محدودة بسجلات البلاغات ومكافحة الاحتيال وبالبيانات الإجمالية غير المرتبطة بهويتك، وذلك للأسباب الأمنية والقانونية.</li>
+        <li>حذف الحساب نهائي: تُفقد العملات والعناصر ولا يمكن استرجاعها.</li>
       </ul>
 
-      <h2>4. مزودو الخدمة من الأطراف الثالثة</h2>
-      <p>نستخدم خدمات <strong>Google Firebase</strong> (المصادقة، قاعدة البيانات، الاستضافة، الإشعارات) لتشغيل التطبيق. كما نعرض إعلانات عبر <strong>Google AdMob</strong>، والتي قد تجمع معرّفات الأجهزة وبيانات الاستخدام لعرض إعلانات مناسبة. يخضع استخدام هذه الخدمات لسياسة خصوصية Google المتوفرة على <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+      <h2>11. حقوقك</h2>
+      <p>يمكنك الوصول إلى بياناتك أو تصحيحها أو حذفها، أو طلب نسخة منها، أو الاعتراض على بعض أنواع المعالجة، أو سحب موافقتك على الإعلانات المخصّصة. إذا كنت مقيمًا في المنطقة الاقتصادية الأوروبية أو المملكة المتحدة، فلك أيضًا حق تقديم شكوى إلى سلطة حماية البيانات المختصة. راسلنا على <a href="mailto:ingamesplayin@gmail.com">ingamesplayin@gmail.com</a> وسنستجيب خلال مدة معقولة (30 يومًا كحد أقصى).</p>
 
-      <h2>5. مشاركة المعلومات</h2>
-      <p>لا نبيع بياناتك الشخصية. قد تُعرض بعض المعلومات (مثل اسمك الظاهر وصورتك ونشاطك العام) للمستخدمين الآخرين كجزء من الميزات الاجتماعية. نشارك البيانات فقط مع مزودي الخدمة المذكورين أعلاه أو عند الالتزام القانوني.</p>
+      <h2>12. أمان البيانات</h2>
+      <p>نستخدم اتصالات مشفّرة (HTTPS)، وقواعد أمان على مستوى قاعدة البيانات، وعمليات حساسة تُنفَّذ على الخادم فقط (مثل منح العملات)، إضافة إلى Firebase App Check. مع ذلك لا يمكن ضمان أمان أي نظام بنسبة 100%.</p>
 
-      <h2>6. حقوقك</h2>
-      <p>يمكنك الوصول إلى بياناتك أو تصحيحها أو حذفها. ولحذف حسابك وجميع بياناتك المرتبطة به، يمكنك استخدام خيار "حذف الحساب" داخل التطبيق أو مراسلتنا على البريد أدناه. سنستجيب خلال مدة معقولة.</p>
+      <h2>13. التغييرات على هذه السياسة</h2>
+      <p>قد نحدّث هذه السياسة من وقت لآخر. سننشر أي تغييرات على هذه الصفحة مع تحديث تاريخ "آخر تحديث"، وسنُعلمك داخل التطبيق عند حدوث تغييرات جوهرية.</p>
 
-      <h2>7. أمان البيانات</h2>
-      <p>نستخدم قواعد أمان وآليات حماية لحفظ بياناتك، لكن لا يمكن ضمان أمان أي نظام بنسبة 100%.</p>
-
-      <h2>8. التغييرات على هذه السياسة</h2>
-      <p>قد نحدّث هذه السياسة من وقت لآخر. سننشر أي تغييرات على هذه الصفحة مع تحديث تاريخ "آخر تحديث".</p>
-
-      <h2>9. تواصل معنا</h2>
-      <p>لأي استفسار حول الخصوصية، راسلنا على: <a href="mailto:ingamesplayin@gmail.com">ingamesplayin@gmail.com</a></p>
+      <h2>14. تواصل معنا</h2>
+      <p>لأي استفسار حول الخصوصية أو لطلب حذف البيانات، راسل <strong>Allaoui_projects</strong> على: <a href="mailto:ingamesplayin@gmail.com">ingamesplayin@gmail.com</a></p>
     </div>
-    <p class="updated">© 2026 InGames — جميع الحقوق محفوظة</p>
+    <p class="updated">© 2026 Allaoui_projects — جميع الحقوق محفوظة</p>
   </section>
 
   <!-- ════════════ ENGLISH ════════════ -->
   <section class="doc" id="doc-en" dir="ltr">
     <div class="card">
-      <p class="muted">Last updated: June 1, 2026</p>
-      <p>This Privacy Policy explains how <strong>InGames</strong> ("we", "us") collects, uses, and protects your information when you use the <strong>InGames</strong> application ("the App"). By using the App, you agree to the practices described here.</p>
+      <p class="muted">Last updated: August 3, 2026</p>
+      <p>This Privacy Policy explains how <strong>Allaoui_projects</strong> ("we", "us") collects, uses, and protects your information when you use the <strong>InGames</strong> application ("the App"). By using the App, you agree to the practices described here.</p>
 
-      <h2>1. Age Requirement</h2>
-      <p>The App is intended for users aged <strong>13 and older</strong>. We do not knowingly collect data from children under 13. If we learn that we have collected data from a child under 13, we will delete it.</p>
+      <h2>1. Who We Are</h2>
+      <p>The App is developed and published by <strong>Allaoui_projects</strong>, an independent developer based in the Kingdom of Morocco, who is the data controller for your information. Contact: <a href="mailto:ingamesplayin@gmail.com">ingamesplayin@gmail.com</a>.</p>
 
-      <h2>2. Information We Collect</h2>
+      <h2>2. Age Requirement</h2>
+      <p>The App is intended for users aged <strong>13 and older</strong> and is not directed to children. We do not knowingly collect data from children under 13. If we learn that we have collected data from a child under 13, we will delete the account and its data.</p>
+
+      <h2>3. Information We Collect</h2>
       <ul>
-        <li><strong>Account information:</strong> display name, email address, profile photo or chosen avatar icon.</li>
-        <li><strong>Content you create:</strong> direct messages, follow lists, liked and saved games, ratings.</li>
-        <li><strong>Usage data:</strong> games you play, in-app interactions, and technical device identifiers.</li>
-        <li><strong>Notifications:</strong> your device token (FCM token) used to deliver notifications.</li>
+        <li><strong>Account information:</strong> display name, email address, profile photo or chosen avatar icon. When you sign in with Google, we receive only your name, email, and photo from your Google account.</li>
+        <li><strong>Profile and in-app progress:</strong> coin balance, items you own (profile icons and chat backgrounds), daily check-in streak, number of games played, liked and saved games, and ratings.</li>
+        <li><strong>Content you create:</strong> direct messages, multiplayer room chat, reports you submit, and your follower/following lists.</li>
+        <li><strong>Usage and device data:</strong> games you open, in-app interactions, device model and OS, app version, language, technical identifiers, and diagnostic data about crashes and performance.</li>
+        <li><strong>Notifications:</strong> your device token (FCM token) used to deliver notifications, and your notification preferences.</li>
+        <li><strong>Advertising data:</strong> your device's Advertising ID, IP address (from which an approximate city/country-level location may be inferred), and your interactions with ads — collected by Google AdMob as described in Section 5.</li>
+        <li><strong>Anti-abuse data:</strong> app integrity tokens (Firebase App Check) plus timestamps and rate-limit counters, used to prevent cheating and reward fraud.</li>
+      </ul>
+      <p class="muted">The App does not request access to your contacts, precise location, camera, or files, and does not record audio.</p>
+
+      <h2>4. How We Use Your Information</h2>
+      <ul>
+        <li>To operate the App and enable multiplayer, random matchmaking, messaging, and follow features.</li>
+        <li>To run the in-app coin economy: daily rewards, challenges, the reward wheel, coin gifting, and purchases of icons and backgrounds with coins.</li>
+        <li>To personalize in-app content and recommendations.</li>
+        <li>To send activity-related notifications (new message, new follower, game invite, admin announcements).</li>
+        <li>To serve and measure ads, and to grant and verify ad rewards.</li>
+        <li>To analyze usage in aggregate so we can improve the App and fix crashes.</li>
+        <li>To maintain safety, review reports, and prevent cheating and abuse.</li>
       </ul>
 
-      <h2>3. How We Use Your Information</h2>
+      <h2>5. Advertising and the Advertising ID</h2>
+      <p>The App shows ads (banner, interstitial, and rewarded) through <strong>Google AdMob</strong>. Google and its partners may use your Advertising ID, IP address, and usage data to serve and measure ads, and those ads may be personalized to your interests.</p>
       <ul>
-        <li>To operate the App and enable multiplayer, messaging, and follow features.</li>
-        <li>To personalize content and recommendations.</li>
-        <li>To send activity-related notifications.</li>
-        <li>To maintain safety and prevent abuse.</li>
+        <li>If you are in the EEA, the UK, or Switzerland, Google may present a consent message before personalized ads are served; where consent is not given, ads are limited to non-personalized ads.</li>
+        <li>You can opt out of ads personalization, or reset or delete your Advertising ID, at any time in your Android settings: <em>Settings → Google → Ads</em>.</li>
+        <li>For more control over Google ads: <a href="https://myadcenter.google.com" target="_blank" rel="noopener">myadcenter.google.com</a>.</li>
+      </ul>
+      <p>When you watch a rewarded ad, our servers receive a signed callback from AdMob confirming completion (containing only your in-app account identifier) so the reward can be credited without tampering.</p>
+
+      <h2>6. Analytics</h2>
+      <p>We use <strong>Google Analytics for Firebase</strong> to understand in aggregate how the App is used (sessions, screens used, crashes). We do not use this data to identify you personally.</p>
+
+      <h2>7. Third-Party Service Providers</h2>
+      <p>We rely on the following Google services to run the App: <strong>Firebase Authentication</strong> (sign-in), <strong>Cloud Firestore</strong> (database), <strong>Cloud Functions</strong> (server-side operations), <strong>Firebase Cloud Messaging</strong> (notifications), <strong>Firebase App Check</strong> (abuse protection), <strong>Firebase Hosting</strong>, <strong>Google Sign-In</strong>, and <strong>Google AdMob</strong> (advertising). Use of these services is subject to Google's Privacy Policy at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+      <p>Games open inside the App in an embedded browser from our own domain <a href="https://ingames.fun" target="_blank" rel="noopener">ingames.fun</a>; they run locally on your device and do not ask you for personal data.</p>
+
+      <h2>8. Sharing of Information</h2>
+      <p><strong>We do not sell your personal data and we do not share it with data brokers.</strong> Some information is visible to other users as a normal part of the social features: your display name, photo or avatar, public profile and stats, follow lists, and messages you send to a specific user (visible to that user only). We share data only with the service providers listed above, where legally required, or to protect our rights and user safety.</p>
+
+      <h2>9. International Data Transfers</h2>
+      <p>Data is stored and processed on Google servers, which may be located outside your country of residence. Google relies on approved transfer mechanisms (such as Standard Contractual Clauses) to protect that data.</p>
+
+      <h2>10. Data Retention and Account Deletion</h2>
+      <p>We keep your account data for as long as your account remains active. You can delete your account at any time from inside the App via <em>Settings → Delete Account</em>, or by emailing us at the address below.</p>
+      <ul>
+        <li>Deletion removes: your account record, profile, coin balance and owned items, follow lists, notifications, and your device token.</li>
+        <li>Messages you previously sent may remain visible in the recipient's copy, and we may retain report, moderation, and anti-fraud logs plus aggregate non-identifying data for a limited period for security and legal reasons.</li>
+        <li>Deletion is permanent: coins and items are lost and cannot be restored.</li>
       </ul>
 
-      <h2>4. Third-Party Service Providers</h2>
-      <p>We use <strong>Google Firebase</strong> (authentication, database, hosting, notifications) to run the App. We also display ads through <strong>Google AdMob</strong>, which may collect device identifiers and usage data to serve relevant ads. Use of these services is subject to Google's Privacy Policy at <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+      <h2>11. Your Rights</h2>
+      <p>You may access, correct, or delete your data, request a copy of it, object to certain processing, or withdraw your consent to personalized ads. If you are in the EEA or UK, you also have the right to lodge a complaint with your data protection authority. Contact us at <a href="mailto:ingamesplayin@gmail.com">ingamesplayin@gmail.com</a> and we will respond within a reasonable time (no later than 30 days).</p>
 
-      <h2>5. Sharing of Information</h2>
-      <p>We do not sell your personal data. Some information (such as your display name, photo, and public activity) may be visible to other users as part of the social features. We share data only with the service providers listed above or when legally required.</p>
+      <h2>12. Data Security</h2>
+      <p>We use encrypted connections (HTTPS), database-level security rules, server-only handling of sensitive operations (such as granting coins), and Firebase App Check. Even so, no system can be guaranteed 100% secure.</p>
 
-      <h2>6. Your Rights</h2>
-      <p>You may access, correct, or delete your data. To delete your account and all associated data, use the "Delete Account" option inside the App or contact us at the email below. We will respond within a reasonable time.</p>
+      <h2>13. Changes to This Policy</h2>
+      <p>We may update this Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date, and we will notify you in the App if the changes are material.</p>
 
-      <h2>7. Data Security</h2>
-      <p>We use security rules and protective measures to safeguard your data, but no system can be guaranteed 100% secure.</p>
-
-      <h2>8. Changes to This Policy</h2>
-      <p>We may update this Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.</p>
-
-      <h2>9. Contact Us</h2>
-      <p>For any privacy questions, contact us at: <a href="mailto:ingamesplayin@gmail.com">ingamesplayin@gmail.com</a></p>
+      <h2>14. Contact Us</h2>
+      <p>For any privacy question or a data deletion request, contact <strong>Allaoui_projects</strong> at: <a href="mailto:ingamesplayin@gmail.com">ingamesplayin@gmail.com</a></p>
     </div>
-    <p class="updated">© 2026 InGames — All rights reserved</p>
+    <p class="updated">© 2026 Allaoui_projects — All rights reserved</p>
   </section>
 </div>
 
