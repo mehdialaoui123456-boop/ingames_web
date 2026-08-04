@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حذف الحساب — InGames | Delete Account</title>
+<link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+<link rel="apple-touch-icon" href="assets/favicon.jpg">
+<style>
+  :root{
+    --blue:#1877F2;
+    --blue-dark:#0A5DC2;
+    --bg:#0c0c10;
+    --card:#15151c;
+    --text:#e9e9ee;
+    --muted:#9a9aa8;
+    --border:rgba(255,255,255,.08);
+    --danger:#E5484D;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Cairo','Segoe UI',system-ui,-apple-system,sans-serif;
+    line-height:1.85;
+    padding:0 0 60px;
+  }
+  .hero{
+    background:linear-gradient(135deg,var(--blue),var(--blue-dark));
+    padding:38px 22px 30px;
+    text-align:center;
+  }
+  .hero h1{font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:6px}
+  .hero .sub{color:rgba(255,255,255,.85);font-size:.85rem}
+  .hero .dev{color:rgba(255,255,255,.7);font-size:.78rem;margin-top:4px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px}
+  .lang-toggle{display:flex;gap:8px;justify-content:center;margin:18px 0}
+  .lang-toggle button{
+    background:var(--card);color:var(--muted);border:1px solid var(--border);
+    border-radius:999px;padding:8px 22px;font-family:inherit;font-size:.85rem;
+    font-weight:700;cursor:pointer;transition:all .2s;
+  }
+  .lang-toggle button.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+  section.doc{display:none}
+  section.doc.active{display:block}
+  .card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:16px;padding:22px;margin-top:16px;
+  }
+  h2{font-size:1.1rem;color:var(--blue);font-weight:800;margin:24px 0 8px}
+  h2:first-child{margin-top:0}
+  p,li{color:var(--text);font-size:.92rem;margin-bottom:8px}
+  ul,ol{padding-inline-start:22px;margin-bottom:8px}
+  li{margin-bottom:6px}
+  .muted{color:var(--muted);font-size:.82rem}
+  .note{
+    background:rgba(24,119,242,.08);border:1px solid rgba(24,119,242,.25);
+    border-radius:12px;padding:12px 14px;margin:10px 0;
+  }
+  .warn{
+    background:rgba(229,72,77,.08);border:1px solid rgba(229,72,77,.28);
+    border-radius:12px;padding:12px 14px;margin:10px 0;
+  }
+  .note p:last-child,.warn p:last-child{margin-bottom:0}
+  .btn{
+    display:inline-block;background:var(--blue);color:#fff;font-weight:800;
+    padding:12px 26px;border-radius:999px;margin:8px 0;font-size:.92rem;
+  }
+  .btn:hover{background:var(--blue-dark);text-decoration:none}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .updated{text-align:center;color:var(--muted);font-size:.8rem;margin-top:24px}
+  [dir="ltr"]{text-align:left}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>InGames</h1>
+  <div class="sub">حذف الحساب والبيانات · Delete Account &amp; Data</div>
+  <div class="dev">Allaoui_projects</div>
+</div>
+
+<div class="wrap">
+  <div class="lang-toggle">
+    <button id="btn-ar" class="active" onclick="setLang('ar')">العربية</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- ════════════ ARABIC ════════════ -->
+  <section class="doc active" id="doc-ar" dir="rtl">
+    <div class="card">
+      <p class="muted">آخر تحديث: 4 أغسطس 2026</p>
+      <p>هذه الصفحة تشرح كيف تطلب حذف حسابك في تطبيق <strong>InGames</strong> (المعرّف <span dir="ltr">com.ingames.app</span>) الصادر عن <strong>Allaoui_projects</strong>، وما الذي يُحذف بالضبط.</p>
+
+      <h2>الطريقة الأولى: من داخل التطبيق (الأسرع)</h2>
+      <ol>
+        <li>افتح تطبيق <strong>InGames</strong> وسجّل الدخول.</li>
+        <li>اذهب إلى <strong>الإعدادات</strong> (أيقونة الترس في أعلى الملف الشخصي).</li>
+        <li>انزل إلى قسم <strong>الحساب</strong> واضغط <strong>حذف الحساب</strong>.</li>
+        <li>أكّد العملية. يُحذف الحساب فورًا ويُسجَّل خروجك.</li>
+      </ol>
+
+      <h2>الطريقة الثانية: بالبريد الإلكتروني</h2>
+      <p>إذا حذفت التطبيق أو تعذّر عليك تسجيل الدخول، أرسل طلبًا من <strong>البريد الإلكتروني المرتبط بحسابك</strong> إلى العنوان أدناه، واكتب في الموضوع "حذف الحساب" مع ذكر اسمك الظاهر في التطبيق.</p>
+      <p><a class="btn" href="mailto:ingamesplayin@gmail.com?subject=%D8%B7%D9%84%D8%A8%20%D8%AD%D8%B0%D9%81%20%D8%A7%D9%84%D8%AD%D8%B3%D8%A7%D8%A8%20-%20InGames">إرسال طلب الحذف</a></p>
+      <p class="muted">نستخدم البريد المرسِل للتحقق من ملكية الحساب، وننفّذ الطلب خلال <strong>30 يومًا كحد أقصى</strong> (عادةً خلال أيام قليلة). قد نراسلك مرة واحدة للتأكيد قبل التنفيذ.</p>
+
+      <h2>ما الذي يُحذف</h2>
+      <ul>
+        <li>حساب تسجيل الدخول (Firebase Authentication) وبريدك الإلكتروني.</li>
+        <li>ملفك الشخصي: الاسم الظاهر، الصورة أو الأيقونة، وإحصاءاتك.</li>
+        <li>رصيد الكوينز وجميع العناصر المملوكة (الأيقونات وخلفيات المحادثة).</li>
+        <li>قوائم المتابعة والمتابِعين، والألعاب المفضلة والمحفوظة، وتقييماتك.</li>
+        <li>محادثاتك الخاصة <strong>بالكامل</strong> — لديك ولدى الطرف الآخر — وجميع رسائلها، إضافة إلى إشعاراتك ورمز جهازك (FCM Token).</li>
+      </ul>
+
+      <h2>ما قد يبقى ولماذا</h2>
+      <ul>
+        <li><strong>رسائلك داخل غرف اللعب الجماعي</strong> تبقى مرتبطة بالغرفة نفسها لا بحسابك، وتُحذف مع الغرفة.</li>
+        <li><strong>نص أي رسالة تم الإبلاغ عنها</strong> يبقى ضمن سجلات الإشراف حتى <strong>90 يومًا</strong>، وكذلك سجلات مكافحة الاحتيال، لأسباب أمنية ولمنع التحايل على الإيقاف.</li>
+        <li><strong>بيانات إجمالية مجهولة الهوية</strong> (مثل عدد مرات لعب لعبة معيّنة) تبقى، فهي غير مرتبطة بك ولا يمكن الرجوع منها إليك.</li>
+      </ul>
+
+      <div class="warn">
+        <p><strong>الحذف نهائي ولا يمكن التراجع عنه.</strong> تُفقد الكوينز والعناصر التي اشتريتها بها دون تعويض، ولا يمكن استرجاع الحساب أو محتواه بعد التأكيد.</p>
+      </div>
+
+      <div class="note">
+        <p>لمزيد من التفاصيل حول البيانات التي نجمعها ومدة الاحتفاظ بها، راجع <a href="privacy.html">سياسة الخصوصية</a>.</p>
+      </div>
+
+      <h2>تواصل معنا</h2>
+      <p>لأي استفسار حول الحذف: <a href="mailto:ingamesplayin@gmail.com">ingamesplayin@gmail.com</a></p>
+    </div>
+    <p class="updated">© 2026 Allaoui_projects — جميع الحقوق محفوظة</p>
+  </section>
+
+  <!-- ════════════ ENGLISH ════════════ -->
+  <section class="doc" id="doc-en" dir="ltr">
+    <div class="card">
+      <p class="muted">Last updated: August 4, 2026</p>
+      <p>This page explains how to request deletion of your account in the <strong>InGames</strong> app (package <span dir="ltr">com.ingames.app</span>) published by <strong>Allaoui_projects</strong>, and exactly what gets deleted.</p>
+
+      <h2>Option 1: Inside the app (fastest)</h2>
+      <ol>
+        <li>Open <strong>InGames</strong> and sign in.</li>
+        <li>Go to <strong>Settings</strong> (the gear icon at the top of your profile).</li>
+        <li>Scroll to the <strong>Account</strong> section and tap <strong>Delete Account</strong>.</li>
+        <li>Confirm. The account is deleted immediately and you are signed out.</li>
+      </ol>
+
+      <h2>Option 2: By email</h2>
+      <p>If you have uninstalled the app or cannot sign in, send a request <strong>from the email address linked to your account</strong> to the address below, with "Delete Account" as the subject and your in-app display name in the body.</p>
+      <p><a class="btn" href="mailto:ingamesplayin@gmail.com?subject=Delete%20Account%20Request%20-%20InGames">Send a deletion request</a></p>
+      <p class="muted">We use the sending address to verify ownership and complete the request within <strong>30 days at most</strong> (usually within a few days). We may email you once to confirm before proceeding.</p>
+
+      <h2>What is deleted</h2>
+      <ul>
+        <li>Your sign-in account (Firebase Authentication) and email address.</li>
+        <li>Your profile: display name, photo or avatar, and stats.</li>
+        <li>Your coin balance and every owned item (profile icons and chat backgrounds).</li>
+        <li>Follower/following lists, liked and saved games, and your ratings.</li>
+        <li>Your private conversations <strong>in full</strong> — your copy and the other person's — and every message in them, plus your notifications and device token (FCM token).</li>
+      </ul>
+
+      <h2>What may remain, and why</h2>
+      <ul>
+        <li><strong>Messages you posted in multiplayer game rooms</strong> belong to the room rather than to your account, and are removed with the room.</li>
+        <li><strong>The text of any message that was reported</strong> stays in the moderation records for up to <strong>90 days</strong>, as do anti-fraud logs, for security reasons and to prevent ban evasion.</li>
+        <li><strong>Aggregate, non-identifying data</strong> (such as how many times a game was played) remains, as it is not linked to you and cannot be traced back to you.</li>
+      </ul>
+
+      <div class="warn">
+        <p><strong>Deletion is permanent and cannot be undone.</strong> Coins and any items bought with them are lost without compensation, and the account and its content cannot be restored after you confirm.</p>
+      </div>
+
+      <div class="note">
+        <p>For details on what we collect and how long we keep it, see the <a href="privacy.html">Privacy Policy</a>.</p>
+      </div>
+
+      <h2>Contact Us</h2>
+      <p>For any question about deletion: <a href="mailto:ingamesplayin@gmail.com">ingamesplayin@gmail.com</a></p>
+    </div>
+    <p class="updated">© 2026 Allaoui_projects — All rights reserved</p>
+  </section>
+</div>
+
+<script>
+  function setLang(lang){
+    document.getElementById('doc-ar').classList.toggle('active', lang==='ar');
+    document.getElementById('doc-en').classList.toggle('active', lang==='en');
+    document.getElementById('btn-ar').classList.toggle('active', lang==='ar');
+    document.getElementById('btn-en').classList.toggle('active', lang==='en');
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang==='ar' ? 'rtl' : 'ltr';
+  }
+</script>
+</body>
+</html>
