@@ -1,0 +1,4 @@
+# app-ads.txt for InGames (com.ingames.app)
+# Publisher: Allaoui_projects
+# Authorizes Google AdMob to sell this app's inventory.
+google.com, pub-5580178977709797, DIRECT, f08c47fec0942fa0
