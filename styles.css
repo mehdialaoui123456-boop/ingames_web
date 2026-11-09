@@ -22,7 +22,6 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
 body{
   font-family:"Cairo",system-ui,sans-serif;
   background:var(--bg);
@@ -130,7 +129,7 @@ section{position:relative}
 }
 .phone::before{content:"";position:absolute;top:16px;left:50%;transform:translateX(-50%);width:90px;height:26px;background:#05080f;border-radius:0 0 16px 16px;z-index:3}
 .phone-screen{width:100%;height:100%;border-radius:30px;overflow:hidden;position:relative;background:#05080f}
-.phone-screen image-slot{width:100%;height:calc(100% + 28px);display:block;position:relative;top:-28px}
+.phone-screen image-slot{width:100%;height:calc(100% + 28px);display:block;position:relative;top:-12px}
 .scene-shadow{position:absolute;bottom:30px;left:50%;width:300px;height:60px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(0,0,0,.6),transparent 70%);filter:blur(14px)}
 
 /* floating objects */
@@ -261,14 +260,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 36px}
 /* slot label */
 image-slot{--is-bg:rgba(10,16,30,.6)}
 
-/* reveal animations */
-.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
-.reveal.in{opacity:1;transform:none}
-.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
-.reveal.d4{transition-delay:.32s}.reveal.d5{transition-delay:.4s}.reveal.d6{transition-delay:.48s}
-
 @media (prefers-reduced-motion:reduce){
-  .reveal{opacity:1;transform:none;transition:none}
   .orbit{animation:none!important}
 }
 
@@ -367,27 +359,7 @@ html[dir="rtl"] .m-links a{transform:translateX(-24px)}
 @keyframes mItem2{to{opacity:1;transform:translateY(0)}}
 body.menu-open{overflow:hidden}
 
-/* ── CREATIVE ENTRANCE MOTION ── */
-/* richer default reveal: rise + slight scale + blur clear */
-.reveal{opacity:0;transform:translateY(34px) scale(.97);filter:blur(6px);
-  transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1),filter .7s ease}
-.reveal.in{opacity:1;transform:none;filter:blur(0)}
-/* feature cards: alternate slide-in from sides */
-.feat.reveal:nth-child(3n+1){transform:translateY(34px) translateX(-26px) scale(.97)}
-.feat.reveal:nth-child(3n){transform:translateY(34px) translateX(26px) scale(.97)}
-.feat.reveal.in{transform:none}
-/* game cards: pop up with rotation */
-.game.reveal{transform:translateY(40px) rotateX(12deg) scale(.95);transform-origin:bottom center}
-.game.reveal.in{transform:none}
-/* mode cards: rise with depth */
-.mode.reveal{transform:translateY(46px) scale(.95)}
-.mode.reveal.in{transform:none}
-/* section heads: gentle clip-up for h2 */
-.sec-head h2.reveal{transform:translateY(28px);filter:blur(4px)}
-.sec-head h2.reveal.in{transform:none;filter:blur(0)}
-
 @media (prefers-reduced-motion:reduce){
-  .reveal,.feat.reveal,.game.reveal,.mode.reveal{opacity:1!important;transform:none!important;filter:none!important;transition:none}
   .m-menu,.m-overlay,.m-links a,.m-dl{transition:none;animation:none}
 }
 
@@ -425,71 +397,6 @@ body.menu-open{overflow:hidden}
 /* extra breathing room between the two hero headline lines */
 .hero-copy h1 .hl{display:inline-block;margin-top:.18em}
 
-/* ════════════════════════════════════════════════════════════════
-   3D SECTION TRANSITIONS
-   ════════════════════════════════════════════════════════════════ */
-
-/* perspective context on grid containers so child reveals animate in 3D */
-.feat-grid{perspective:1200px;perspective-origin:50% 0%}
-.games-grid{perspective:1000px;perspective-origin:50% 0%}
-.modes{perspective:1100px;perspective-origin:50% 0%}
-
-/* ── feature cards: 3D entrance (overrides earlier reveal rules) ── */
-.feat.reveal{
-  transform:translateY(36px) rotateX(22deg) scale(.96);
-  filter:blur(5px);
-  transform-origin:bottom center;
-}
-.feat.reveal:nth-child(3n+1){
-  transform:translateY(34px) translateX(-16px) rotateX(16deg) rotateY(10deg) scale(.97);
-  filter:blur(5px);
-  transform-origin:bottom center;
-}
-.feat.reveal:nth-child(3n){
-  transform:translateY(34px) translateX(16px) rotateX(16deg) rotateY(-10deg) scale(.97);
-  filter:blur(5px);
-  transform-origin:bottom center;
-}
-.feat.reveal.in{transform:none;filter:blur(0)}
-
-/* ── game cards: strong perspective rise ── */
-.game.reveal{
-  transform:translateY(50px) rotateX(28deg) scale(.92);
-  transform-origin:bottom center;
-  filter:blur(5px);
-}
-.game.reveal.in{transform:none;filter:blur(0)}
-
-/* ── mode cards: depth zoom ── */
-.mode.reveal{
-  transform:translateY(50px) rotateX(20deg) translateZ(-50px) scale(.92);
-  transform-origin:bottom center;
-  filter:blur(5px);
-}
-.mode.reveal.in{transform:none;filter:blur(0)}
-
-/* ── section heading: X-axis flip ── */
-.sec-head h2.reveal{
-  transform:translateY(30px) rotateX(18deg);
-  transform-origin:bottom center;
-  filter:blur(5px);
-}
-.sec-head h2.reveal.in{transform:none;filter:blur(0)}
-
-/* ── CTA inner: perspective flip ── */
-.cta-inner.reveal{
-  opacity:0;
-  transform:perspective(1100px) rotateX(12deg) translateY(40px) scale(.97);
-  transform-origin:bottom center;
-  filter:blur(6px);
-  transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1),filter .8s ease;
-}
-.cta-inner.reveal.in{
-  opacity:1;
-  transform:perspective(1100px) rotateX(0deg) translateY(0) scale(1);
-  filter:blur(0);
-}
-
 /* glowing seam between sections */
 section.block::after{
   content:'';
@@ -502,20 +409,6 @@ section.block::after{
     rgba(55,224,255,.1) 85%,
     transparent 100%);
   pointer-events:none;
-}
-
-/* section wraps receive scroll-driven 3D depth tilt via JS */
-section.block .wrap,footer .wrap{will-change:transform}
-
-/* kill all 3D effects for reduced-motion preference */
-@media(prefers-reduced-motion:reduce){
-  .feat-grid,.games-grid,.modes{perspective:none}
-  .feat.reveal,.feat.reveal:nth-child(3n+1),.feat.reveal:nth-child(3n),
-  .game.reveal,.mode.reveal,
-  .sec-head h2.reveal,.cta-inner.reveal{
-    opacity:1!important;transform:none!important;filter:none!important;transition:none!important
-  }
-  section.block .wrap,footer .wrap{will-change:auto;transform:none!important}
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -538,7 +431,7 @@ section.block .wrap,footer .wrap{will-change:transform}
   .phone{border-radius:35px;padding:11px}
   .phone::before{width:75px;height:22px;top:13px;border-radius:0 0 13px 13px}
   .phone-screen{border-radius:25px}
-  .phone-screen image-slot{height:calc(100% + 23px);top:-23px}
+  .phone-screen image-slot{height:calc(100% + 23px);top:-9px}
   .scene{perspective:1075px}
 }
 
@@ -550,7 +443,7 @@ section.block .wrap,footer .wrap{will-change:transform}
   .phone{width:196px;height:390px;border-radius:29px;padding:9px}
   .phone::before{width:63px;height:18px;top:11px;border-radius:0 0 11px 11px}
   .phone-screen{border-radius:21px}
-  .phone-screen image-slot{height:calc(100% + 20px);top:-20px}
+  .phone-screen image-slot{height:calc(100% + 20px);top:-8px}
   .hero-actions{margin-bottom:28px}
   section.block{padding:50px 0}
   .sec-head h2{font-size:clamp(1.75rem,6.5vw,2.4rem);margin:14px 0 10px}
@@ -581,7 +474,7 @@ section.block .wrap,footer .wrap{will-change:transform}
   .phone{width:174px;height:346px;border-radius:26px;padding:8px}
   .phone::before{width:56px;height:16px;top:10px;border-radius:0 0 10px 10px}
   .phone-screen{border-radius:18px}
-  .phone-screen image-slot{height:calc(100% + 17px);top:-17px}
+  .phone-screen image-slot{height:calc(100% + 17px);top:-7px}
   .hero-copy h1{font-size:clamp(1.85rem,8.5vw,2.1rem)}
   .hero-copy p{font-size:1rem}
   .stats{gap:8px}
@@ -597,4 +490,70 @@ section.block .wrap,footer .wrap{will-change:transform}
   .mode{padding:22px 18px}
   .foot-grid{gap:20px}
   footer{padding:32px 0 20px}
+}
+
+/* ════════════════════════════════════════════════════════════════
+   MOBILE REFINEMENTS
+   ════════════════════════════════════════════════════════════════ */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{-webkit-tap-highlight-color:transparent}
+img,svg{max-width:100%}
+
+/* touch screens have no real hover: stop cards sticking in a "lifted" state after a tap */
+@media (hover:none){
+  .feat:hover,.game:hover,.mode:hover,.game-more:hover,
+  .btn-primary:hover,.btn-ghost:hover,.store-badge:hover,.socials a:hover{transform:none}
+  .game:hover .game-img{transform:none}
+  .game-more:hover .more-ic{transform:none}
+  .m-close:hover{transform:none}
+}
+
+/* drawer: use the dynamic viewport so it isn't cut by mobile browser bars */
+@supports (height:100dvh){ .m-menu{height:100dvh} }
+.m-menu{overflow-y:auto;padding-bottom:max(26px,env(safe-area-inset-bottom))}
+
+@media(max-width:980px){
+  .nav-inner{margin-inline:12px;margin-top:max(10px,env(safe-area-inset-top))}
+  .glow.g1{width:420px;height:420px}
+  .glow.g2{width:360px;height:360px}
+  .glow.g3{width:440px;height:440px}
+  .bg-field .glow{filter:blur(70px)}
+}
+
+@media(max-width:620px){
+  .wrap{padding-inline:max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-left))}
+  .grain{display:none}
+  .bg-field .glow{filter:blur(56px)}
+
+  /* three stats side by side, no overflow */
+  .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .stat{min-width:0;padding:14px 8px;text-align:center}
+  .stat .num{font-size:clamp(1.2rem,6vw,1.6rem);white-space:nowrap}
+  .stat .lbl{font-size:.76rem;margin-top:8px;word-spacing:0}
+
+  .hero-actions{justify-content:flex-start}
+  .game-foot{padding:14px 16px}
+  .game-foot h4{font-size:1rem}
+  .badge{top:10px;font-size:.72rem;padding:5px 11px}
+  .mtag{top:16px;inset-inline-end:16px}
+  .mode .micon{width:56px;height:56px;margin-bottom:18px}
+  .foot-col a{padding:10px 0}
+  .socials a{width:44px;height:44px}
+  .foot-bottom{align-items:center;text-align:center}
+}
+
+@media(max-width:480px){
+  .nav-inner{padding:10px 14px}
+  /* declutter the phone scene: hide the two extra chips that sit on top of the screen */
+  .orbit[data-depth="1.8"],.orbit[data-depth="1.1"]{display:none}
+  .game-more{min-height:160px}
+}
+
+@media(max-width:390px){
+  .glass-chip{width:54px;height:54px;border-radius:15px}
+  .glass-chip svg{width:26px;height:26px}
+  .ball-8{width:50px;height:50px}
+  .ball-8 .num span{width:20px;height:20px;font-size:.7rem}
+  .store-badge img{height:52px}
+  .store-badge-lg img{height:60px}
 }
